@@ -4,81 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Quiz</title>
+    <title>Hashims JS Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
 </head>
 <body>
-    <!-- landing page-->
+    <!--Start Quiz Button-->
+    <div class="start-btn"><button>Start Quiz</button></div>
 
-    <!-- start game button-->
-    <section id="landing-pg">
-        <h1>Lets play a game</h1>
-        <button id="button-start">Start Quiz</button>
-
-    </section>
-
-
-    <!-- question page--> 
-    <section id="question-pg">
-
-        <!-- timer--> 
-        <div id="div-timer">60 (s)</div>
-        
-        <article>
-            <!-- question title--> 
-            <h2 id="question-title">
-                hshshs
-            </h2>
-            
-            <!-- question choices-->
-            <ul>
-                <li class="question-choices"><button class="button-choice">good</button></li>
-                <li class="question-choices"><button class="button-choice">bad</button></li>
-                <li class="question-choices"><button class="button-choice">bloody good</button></li>
-            </ul> 
-            <!-- feedback -right or wrong- --> 
-
-            <div class="question-feedback">
-                well done
-            </div>
-
-        </article>
-        
-    </section> 
-
-    <!-- end game page -->
-    <section id="end-page">
-        
-        <!-- score obtained --> 
-        <h2 id="highscore">10</h2>
-
-        <div>
-            <!-- intials iput--> 
-            <label for="">intials:</label>
-            <input type="text" id="input-initials" >
-            <!-- submit btn--> 
-            <button id="submit-btn">submit</button>
-
+    <!-- Info Box -->
+    <div class="info-box">
+        <div class="info-title">
+            <span>Some Rules Of The Quiz</span>
         </div>
-
-    </section>
-
-
-    <!-- high score page-->
-    <section id="section-highscore">
-        <!-- list of previous scores--> 
-        <ul id="list-scores">
-            <li>sam: 10</li>
-            <li>sam: 10</li>
-            <li>sam: 10</li>
-            <li>sam: 10</li>
-            <li>sam: 10</li>
-        </ul>
-        <!-- back to start --> 
-        <button id="button-home">Back to home</button>
-    </section>    
-
-    
-    
-    
+        <div class="info-list">
+            <div class="info">1. You will only have <span>15 seconds</span> per question.</div>
+            <div class="info">2. Once you select your answer you can't reselect.</div>
+            <div class="info">3. You can't select any option once the time runs out.</div>
+            <div class="info">4. You can't exit the quiz while you are playing.</div>
+            <div class="info">5. You'll get points based on how many questions you've answered correctly.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
 </body>
 </html>
