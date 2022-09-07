@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0%;
     box-sizing: border-box;
-    font-family: monospace;
+    font-family: 'poppins', sans-serif;
 }
 
 body{
@@ -10,7 +11,8 @@ body{
 }
 
 .start-btn,
-.info-box{
+.info-box,
+.quiz-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -26,12 +28,13 @@ body{
     outline: none;
     border: none;
     border-radius: 5px;
-    background: lightgray;
+    background: #fff;
     cursor: pointer;
 
 }
 
 .info-box{
+    display: none;
     width: 640px;
     background: #fff;
     border-radius: 5px;
@@ -73,8 +76,8 @@ body{
 
 .info-box .buttons button{
     margin: 0 5px;
-    height: 40px;
-    width: 100px;
+    eight: 40px;
+    idth: 100px;
     border: 1px solid transparent;
     border-radius: 5px;
     color: #fff;
@@ -82,6 +85,7 @@ body{
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: solid #0263ca;
 }
 
 .buttons button.restart{
@@ -94,9 +98,171 @@ body{
 }
 .buttons button.quit{
     color: #007bff;
+    background: lightgray;
 }
 
 .buttons button.quit:hover{
     color: #fff;
     background: #007bff;
+}
+
+.quiz-box{
+    display: none;
+    width: 550px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.quiz-box header{
+    position: relative;
+    z-index: 99;
+    height: 70px;
+    padding: 0 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-box header .title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz-box header .timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+.quiz-box header .timer .time-text{
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+    
+}
+
+.quiz-box header .timer .timer-sec{
+    font-size: 18px;
+    font-weight: 500;
+    background: #343a40;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+
+.quiz-box .section{
+    padding: 25px 30px 20px 30px;
+    background: #fff;
+}
+
+.quiz-box .section .que-text{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.quiz-box .section .option-list{
+    padding: 20px 0;
+    display: block;
+}
+
+section .option-list .option{
+    background: aliceblue;
+    border: 1px solid #84C5FE;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+section .option-list .option:hover{
+    color: #004085;
+    background: #cce5ff;
+    border-color: #b8daff;
+}
+
+.option-list .option:last-child{
+    margin-bottom: 0px;
+}
+
+.option-list .option .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    pointer-events: none;
+}
+
+.option-list .option .icon.tick{
+    border-color: #23903c;
+    color: #23903c;
+    background-color: #d4edda;
+}
+
+.option-list .option .icon.cross{
+    border-color: #a42834;
+    color: #a42834;
+    background: #f8d7da;
+}
+
+.quiz-box footer{
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz-box footer .total-que span{
+    display: flex;
+    user-select: none;
+}
+
+footer .total-que span p{
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+.total-que span p:first-child{
+    padding-left: 0px;
+}
+
+footer .next-btn{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #007bff;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer .next-btn:hover{
+    background: #0263ca;
 }
