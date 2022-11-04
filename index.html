@@ -4,92 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hashims JS Quiz</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAweome CDN Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!--Start Quiz Button-->
-    <div class="start_btn"><button>Start Quiz</button></div>
+    <!-- landing page -->
+    <!-- start game button -->
+    <section id="section-landing">
+        <h1>lets play a game</h1>
 
-    <!-- Info Box -->
-    <div class="info_box">
-        <div class="info_title">
-            <span>Some Rules Of The Quiz</span>
+        <button id="button-start-game">Start Game</button>
+
+    </section>
+
+    <!-- question page -->
+    <sextion id="section-question" class="hide">
+        <!-- timer -->
+        <dive id="div-timer">60 (s)</dive>
+        <!-- question title -->
+        <article>
+            <h2 id="question-title">how u doin</h2>
+        </article>
+        <!-- answer choices -->
+        <ul>
+            <li class="question-choices"><button class="button-choice">GOOD</button></li>
+            <li class="question-choices"><button class="button-choice">BAD</button></li>
+            <li class="question-choices"><button class="button-choice">BLOODY GOOD</button></li>
+        </ul>
+        <!-- feedback -->
+        <div class="question-feedback">well done!</div>
+    </sextion>
+    
+
+
+    <!-- end game page -->
+    <section id="section-endgame" class="hide">
+
+        <!-- high score obtained -->
+        <h2 id="highscore">10pts</h2>
+
+        <div>
+            <!-- initial imput -->
+            <label for="">intials:</label>
+            <input type="text" id="input-intial">
+
+            <!-- submit button -->
+            <button id="button-submit">submit score</button>
+
         </div>
-        <div class="info_list">
-            <div class="info">1. You will only have <span>15 seconds</span> per question.</div>
-            <div class="info">2. Once you select your answer you can't reselect.</div>
-            <div class="info">3. You can't select any option once the time runs out.</div>
-            <div class="info">4. You can't exit the quiz while you are playing.</div>
-            <div class="info">5. You'll get points based on how many questions you've answered correctly.</div>
-        </div>
-        <div class="buttons">
-            <button class="quit">Exit</button>
-            <button class="restart">Continue</button>
-        </div>
-    </div>
 
-    <!-- Quiz Box -->
-    <div class="quiz_box">
-        <header>
-            <div class="title">JavaScript Quiz</div>
-            <div class="timer">
-                <div class="time_text">Time Left</div>
-                <div class="timer_sec">15</div>
-            </div>
-        </header>
-        <section>
-            <div class="que_text">
-                <span>What does HTML stand for?</span>
-            </div>
-            <div class="option_list">
-                <div class="option">
-                    <span>Hyper Text Preprocessor</span>
-                    <div class="icon tick"><i class="fas fa_check"></i></div>
-                </div>
-                <div class="option">
-                    <span>Hyper Text Markup Language</span>
-                    <div class="icon cross"><i class="fas fa_times"></i></div>
-                </div>
-                <div class="option">
-                    <span>Hyper Text Multiple Language</span>
-                </div>
-                <div class="option">
-                    <span>Hyper Tool Multi Language</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quiz Box Footer -->
-        <footer>
-            <div class="total_que">
-                <span><p>2</p>of<p>5</p>Questions</span>
-            </div>
-            <button class="next_btn">Next Question</button>
-        </footer>
-    </div>
-
-    <!-- Results Box -->
-    <div class="results_box">
-        <div class="icon">
-            <i class="fas fa_crown"></i>
-        </div>
-        <div class="complete_text">You've completed the Quiz!</div>
-        <div class="score_text">
-            <span>Your score is <p>2</p> out of <p>5</p></span>
-        </div>
-        <div class="buttons">
-            <button class="restart">Retry Quiz</button>
-            <button class="quit">Exit</button>
-        </div>
-    </div>
-
-    <script src="../JavaScript-Quiz/script.js"></script>
-    <script src="../JavaScript-Quiz/questions.js"></script>
-
-
-
+    </section>
+    
+<!-- highscore page -->
+<section id="section-highscore" class="hide">
+    <h1>Highscores</h1>
+    <!-- list of scores -->
+    <ul id="list-highscores">
+        <li>sam: 10</li>
+        <li>sam: 10</li>
+        <li>sam: 10</li>
+        <li>sam: 10</li>
+    </ul>
+<!-- return to start -->
+<button id="button-home">Return to home</button>
+</section>
+<script src="./script.js"></script>
 </body>
 </html>
