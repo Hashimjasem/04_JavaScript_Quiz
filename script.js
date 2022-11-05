@@ -1,20 +1,61 @@
 const btnStartGame = document.getElementById('button-start-game');
 const sectionLanding = document.getElementById('section-landing');
 const sectionQuestion = document.getElementById('section-question');
+const sectionEndGame = document.getElementById('section-end-game');
+const spanTimer = document.getElementById('span-timer');
+
+
+
+
 
 //when start button is clicked:
 btnStartGame.addEventListener('click', function(event){
-// hide the landing page
-   sectionLanding.classList.add('hide');
-//show the question section 
-   sectionQuestion.classList.remove('hide');
+   showQuestionSection();
 });
 
 
+function endGame(){
 
+   // end game
+   //show the end game page
+   sectionEndGame.classList.remove('hide');
+   //stop the timer
+   stopTimer();
+   //hide the question section
+   sectionQuestion.classList.add('hide');
+
+}
+
+function startTimer(){
+
+   setInterval(function(){
+      //deduct the time by 1
+      const timeRemaining = Number(spanTimer.textContent) - 1;
+      spanTimer.textContent = timeRemaining;
+
+      //if time remaining  goes to 0
+      //end game
+
+
+
+   }, 1000);
+}
+
+function stopTimer(){
+
+}
+
+function showQuestionSection(){
+   // hide the landing page
+      sectionLanding.classList.add('hide');
+   //show the question section 
+      sectionQuestion.classList.remove('hide');
+};
+      
 //once in the question section;
-// start timer
 
+// start timer
+startTimer
 //when user clicks on on a answer
 //give feedback (right/wrong)
 
