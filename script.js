@@ -1,89 +1,119 @@
 const btnStartGame = document.getElementById('button-start-game');
 const sectionLanding = document.getElementById('section-landing');
 const sectionQuestion = document.getElementById('section-question');
-const sectionEndGame = document.getElementById('section-end-game');
+const sectionEndGame = document.getElementById('section-endgame');
 const spanTimer = document.getElementById('span-timer');
+const questionTitle = document.getElementById('question-title');
+const timeUp = 0
+let timerId;
 
 
 
 
-
-//when start button is clicked:
+// when the start game button is clicked
 btnStartGame.addEventListener('click', function(event){
-   showQuestionSection();
+  showQuestionSection();
 });
 
 
+
 function endGame(){
-
-   // end game
-   //show the end game page
-   sectionEndGame.classList.remove('hide');
-   //stop the timer
-   stopTimer();
-   //hide the question section
-   sectionQuestion.classList.add('hide');
-
+  // end game
+  // show the end game page
+  sectionEndGame.classList.remove('hide');
+  // stop the timer
+  stopTimer();
+  // hide the question section
+  sectionQuestion.classList.add('hide');
 }
+
+
+
 
 function startTimer(){
-
-   setInterval(function(){
-      //deduct the time by 1
-      const timeRemaining = Number(spanTimer.textContent) - 1;
-      spanTimer.textContent = timeRemaining;
-
-      //if time remaining  goes to 0
-      //end game
-
-
-
-   }, 1000);
+  timerId = setInterval(function(){
+    // deduct the time by 1
+    const timeRemaining = Number(spanTimer.textContent) - 1;
+    spanTimer.textContent = timeRemaining;
+    // if timeremainig goes below 0
+    if(timeRemaining == timeUp){
+      console.log('times up')
+      endGame()
+    }
+    // end game
+  }, 1000);
 }
 
-function stopTimer(){
 
+
+
+function stopTimer() {
+  clearInterval(timerId);
 }
+
+
+
+function showQuestion(index){
+  const question = questions[index];
+  questionTitle.textContent = question.title;
+}
+
+
 
 function showQuestionSection(){
-   // hide the landing page
-      sectionLanding.classList.add('hide');
-   //show the question section 
-      sectionQuestion.classList.remove('hide');
-};
-      
-//once in the question section;
-
-// start timer
-startTimer
-//when user clicks on on a answer
-//give feedback (right/wrong)
-
-//if correct: tell them they are correct
-//if wrong: tell them they are wrong & deduct 10s off timer 
-
-//if timeis less than 0 end game
-//end game - show the endgame screen
-//stop timer
-//show score
-//hide the question section
-
-// if time is more than 0 next question
-
-// if user clicks on an answer on last question, end game
-
-//once on end game screen show score and have initial imput and submit
-//if user clicks submit with no imput stop user from procieding, and alert them to type in imput
-//if user types in imput and submit, store score asnd imput in local storage
-//then show the high score page
-//hide end game screen
-// show high score page
-//show all previous highscores
-//grab data from local storage
-//order them from high to low
-
-// if user clicks on retry btn, take them to landing page
-//hide highscore page, and show landing page
+  // hide the landing page
+  sectionLanding.classList.add('hide');
+  // show the question section
+  sectionQuestion.classList.remove('hide');
+  // once we are in the question section
+  // start the timer
+  startTimer();
+  showQuestion(0)
+  // when the clicked on one of the choices
+  // check if the choice is correct or not
+  
+  // if correct
+  // display the correct feedback
+  // then move on to the next qs
+  
+  // if wrong 
+  // display the wrong feedback
+  // deduct 10 sec from the remaining time
+  
+  // if after deducting the time, and time remaining becomes negative
+  // -- end game
+  // 
+  
+  // if time left remains positive,
+  // move on to the next qs
+  
+  
+  // if the use click on a choice in the last qs
+  // end game
+}
 
 
+
+
+
+
+
+
+
+
+// end game section
+// if user click on the submit button without entering any input
+// show an alert, tell the user to type in an input
+
+// user type in something & click on submit
+// store the user initial & highscore in localstorage
+// hide the end game page
+// show the highscore page
+
+
+// highscore page
+// show all the previous highscore
+// grab the data from localstorage
+
+// when user clicked on 'back to home' -- refresh the page
 
