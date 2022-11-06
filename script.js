@@ -7,13 +7,44 @@ const questionTitle = document.getElementById('question-title');
 const timeUp = 0
 let timerId;
 
-
+const btnChoiceOne = document.getElementById('btn-choice-one');
+const btnChoiceTwo = document.getElementById('btn-choice-two');
+const btnChoiceThree = document.getElementById('btn-choice-three');
+const btnChoiceFour = document.getElementById('btn-choice-four');
 
 
 // when the start game button is clicked
 btnStartGame.addEventListener('click', function(event){
   showQuestionSection();
 });
+
+btnChoiceOne.addEventListener('click', function(event){
+  choiceOne();
+});
+btnChoiceTwo.addEventListener('click', function(event){
+  choiceTwo();
+});
+btnChoiceThree.addEventListener('click', function(event){
+  choiceThree();
+});
+btnChoiceFour.addEventListener('click', function(event){
+  choiceFour();
+});
+
+
+function choiceOne() {
+  
+}
+function choiceOne() {
+  
+}
+function choiceOne() {
+  
+}
+function choiceOne() {
+  
+}
+
 
 
 
