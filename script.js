@@ -7,16 +7,19 @@ const questionTitle = document.getElementById('question-title');
 const timeUp = 0
 let timerId;
 
-const btnChoiceOne = document.getElementById('btn-choice-one');
-const btnChoiceTwo = document.getElementById('btn-choice-two');
-const btnChoiceThree = document.getElementById('btn-choice-three');
-const btnChoiceFour = document.getElementById('btn-choice-four');
+// const btnChoiceOne = document.getElementById('btn-choice-one');
+// const btnChoiceTwo = document.getElementById('btn-choice-two');
+// const btnChoiceThree = document.getElementById('btn-choice-three');
+// const btnChoiceFour = document.getElementById('btn-choice-four');
 
 
 // when the start game button is clicked
 btnStartGame.addEventListener('click', function(event){
   showQuestionSection();
 });
+
+
+
 
 btnChoiceOne.addEventListener('click', function(event){
   choiceOne();
@@ -33,16 +36,48 @@ btnChoiceFour.addEventListener('click', function(event){
 
 
 function choiceOne() {
+  //if true 
+  //give feedback 
+  //score +1
   
+  //if false
+  //give feedback
+  //deduct 10s from timer
+
+  // next question
 }
 function choiceOne() {
+  //if true 
+  //give feedback 
+  //score +1
   
+  //if false
+  //give feedback
+  //deduct 10s from timer
+
+  // next question
 }
 function choiceOne() {
+  //if true 
+  //give feedback 
+  //score +1
   
+  //if false
+  //give feedback
+  //deduct 10s from timer
+
+  // next question
 }
 function choiceOne() {
+  //if true 
+  //give feedback 
+  //score +1
   
+  //if false
+  //give feedback
+  //deduct 10s from timer
+
+  // next question
 }
 
 
@@ -88,8 +123,6 @@ function showQuestion(index){
   const question = questions[index];
   questionTitle.textContent = question.title;
 }
-
-
 
 function showQuestionSection(){
   // hide the landing page
