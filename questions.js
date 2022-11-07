@@ -1,17 +1,21 @@
 const questions = [
     {
-      title: "How you doinnnnnnnn?",
+      title: "How to write an IF statement for executing some code if i is NOT equal to 5?",
       choices: [
         {
-          title: "good",
-          isCorrect: true,
-        },
-        {
-          title: "bad",
+          title: "if(i<>5)",
           isCorrect: false,
         },
         {
-          title: "maybe",
+          title: "if i<>5",
+          isCorrect: false,
+        },
+        {
+          title: "if (i != 5)",
+          isCorrect: true,
+        },
+        {
+          title: "if (i !> 5)",
           isCorrect: false,
         },
       ]

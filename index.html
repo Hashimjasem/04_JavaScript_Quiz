@@ -10,7 +10,7 @@
 <body>
     <!-- landing page -->
     <!-- start game button -->
-    <section id="section-landing">
+    <section id="section-landing" >
         <h1>lets play a game</h1>
 
         <button id="button-start-game">Start Game</button>
@@ -18,7 +18,7 @@
     </section>
 
     <!-- question page -->
-    <sextion id="section-question" class="hide">
+    <section id="section-question" class="hide">
         <!-- timer -->
         <div>Timer: <span id="span-timer"> 60 </span> (s)</div>
         <!-- question title -->
@@ -27,15 +27,16 @@
         </article>
         <!-- answer choices -->
         <ul>
-            <li class="question-choices"><button class="button-choice-one">GOOD</button></li>
-            <li class="question-choices"><button class="button-choice-two">BAD</button></li>
-            <li class="question-choices"><button class="button-choice-three">BLOODY GOOD</button></li>
-            <li class="question-choices"><button class="button-choice-four">BLOODY GOOD</button></li>
+            <li class="question-choices"><button class="button-choice-one btn">GOOD</button></li>
+            <li class="question-choices"><button class="button-choice-two btn">BAD</button></li>
+            <li class="question-choices"><button class="button-choice-three btn">BLOODY GOOD</button></li>
+            <li class="question-choices"><button class="button-choice-four btn">BLOODY GOOD</button></li>
 
         </ul>
         <!-- feedback -->
-        <div class="question-feedback">well done!</div>
-    </sextion>
+        <div class="question-feedback hide">correct</div>
+        <div class="question-feedback hide">incorrect</div>
+    </section>
     
 
 
