@@ -6,80 +6,29 @@ const spanTimer = document.getElementById('span-timer');
 const questionTitle = document.getElementById('question-title');
 const timeUp = 0
 let timerId;
+const answerOutput = document.getElementById('answer-output');
+const ansBtn = document.querySelectorAll('.aswBtn');
 
-// const btnChoiceOne = document.getElementById('btn-choice-one');
-// const btnChoiceTwo = document.getElementById('btn-choice-two');
-// const btnChoiceThree = document.getElementById('btn-choice-three');
-// const btnChoiceFour = document.getElementById('btn-choice-four');
+answerOutput.addEventListener('click', function(event){
+  console.log(event.target)
+})
+
+function genetrateBtnAns(title, isCorrect) {
+  // create a button element
+  const button = document.createElement('button')
+  // provide button with a class
+  button.classList.add('aswBtn');
+  // assign the attributes(data-iscorrect)
+  button.setAttribute('data-isCorrect', isCorrect);
+  // textContent-for answer
+  button.textContent = title;
+  answerOutput.appendChild(button);
+}
 
 
-// when the start game button is clicked
 btnStartGame.addEventListener('click', function(event){
   showQuestionSection();
 });
-
-
-
-
-btnChoiceOne.addEventListener('click', function(event){
-  choiceOne();
-});
-btnChoiceTwo.addEventListener('click', function(event){
-  choiceTwo();
-});
-btnChoiceThree.addEventListener('click', function(event){
-  choiceThree();
-});
-btnChoiceFour.addEventListener('click', function(event){
-  choiceFour();
-});
-
-
-function choiceOne() {
-  //if true 
-  //give feedback 
-  //score +1
-  
-  //if false
-  //give feedback
-  //deduct 10s from timer
-
-  // next question
-}
-function choiceOne() {
-  //if true 
-  //give feedback 
-  //score +1
-  
-  //if false
-  //give feedback
-  //deduct 10s from timer
-
-  // next question
-}
-function choiceOne() {
-  //if true 
-  //give feedback 
-  //score +1
-  
-  //if false
-  //give feedback
-  //deduct 10s from timer
-
-  // next question
-}
-function choiceOne() {
-  //if true 
-  //give feedback 
-  //score +1
-  
-  //if false
-  //give feedback
-  //deduct 10s from timer
-
-  // next question
-}
-
 
 
 
@@ -118,11 +67,20 @@ function stopTimer() {
 }
 
 
+function checkIsCorrect() {
+  
+}
 
 function showQuestion(index){
   const question = questions[index];
   questionTitle.textContent = question.title;
-}
+  console.log(question);
+
+  for (let i = 0; i < question.choices.length; i++) {
+    const title = question.choices[i].title;
+    const isCorrect = question.choices[i].isCorrect;;
+    genetrateBtnAns(title, isCorrect);
+}}
 
 function showQuestionSection(){
   // hide the landing page
@@ -133,6 +91,7 @@ function showQuestionSection(){
   // start the timer
   startTimer();
   showQuestion(0)
+
   // when the clicked on one of the choices
   // check if the choice is correct or not
   
@@ -150,7 +109,6 @@ function showQuestionSection(){
   
   // if time left remains positive,
   // move on to the next qs
-  
   
   // if the use click on a choice in the last qs
   // end game

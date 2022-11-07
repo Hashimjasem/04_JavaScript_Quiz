@@ -21,14 +21,22 @@ const questions = [
       ]
     },
     {
-      title: "How are you?",
+      title: "Inside which HTML element do we put the JavaScript?",
       choices: [
         {
-          title: "good",
+          title: "<js>",
           isCorrect: true,
         },
         {
           title: "bad",
+          isCorrect: false,
+        },
+        {
+          title: "maybe",
+          isCorrect: false,
+        },
+        {
+          title: "maybe",
           isCorrect: false,
         },
         {
