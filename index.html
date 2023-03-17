@@ -4,69 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Quiz</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d534f45f0a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <!-- landing page -->
-    <!-- start game button -->
-    <section id="section-landing" >
-        <h1>lets play a game</h1>
-
-        <button id="button-start-game">Start Game</button>
-
-    </section>
-
-    <!-- question page -->
-    <section id="section-question" class="hide">
-        <!-- timer -->
-        <div>Timer: <span id="span-timer"> 60 </span> (s)</div>
-        <!-- question title -->
-        <article>
-            <h2 id="question-title">how u doin</h2>
-        </article>
-        <!-- answer choices -->
-        <ul id="answer-output">
-        </ul>
-        <!-- feedback -->
-        <div class="question-feedback hide">correct</div>
-        <div class="question-feedback hide">incorrect</div>
-    </section>
-    
-
-
-    <!-- end game page -->
-    <section id="section-endgame" class="hide">
-
-        <!-- high score obtained -->
-        <h2 id="highscore">10pts</h2>
-
-        <div>
-            <!-- initial imput -->
-            <label for="">intials:</label>
-            <input type="text" id="input-intial">
-
-            <!-- submit button -->
-            <button id="button-submit">submit score</button>
-
+    <div class="container">
+        <div id="home" class="flex-colomn flex-centre">
+            <h1>Are You Ready?</h1>
+            <a href="/game.html" class="btn">Play</a>
+            <a href="/highscores.html" id="highscore-btn" class="btn">Highscores 
+                <i class="fa-sharp fa-solid fa-crown"></i>
+            </a>
         </div>
-
-    </section>
-    
-<!-- highscore page -->
-<section id="section-highscore" class="hide">
-    <h1>Highscores</h1>
-    <!-- list of scores -->
-    <ul id="list-highscores">
-        <li>sam: 10</li>
-        <li>sam: 10</li>
-        <li>sam: 10</li>
-        <li>sam: 10</li>
-    </ul>
-<!-- return to start -->
-<button id="button-home">Return to home</button>
-</section>
-<script src="./questions.js"></script>
-<script src="./script.js"></script>
+    </div>
 </body>
 </html>
